@@ -1,14 +1,19 @@
-// ** Konsolda mesaj vermek için console.log() fonksiyonu kullanılır.
+// * =======================================================
+// *                       KONSOL
+// * =======================================================
+// * Konsolda mesaj vermek için console.log() fonksiyonu kullanılır.
 console.log("Hello javascript");
 console.log("Javascript javadan kolay bir dildir..");
 console.error("Bu bir hatadır.");
 console.warn("Bu bir uyarıdır");
 
-// alert("Dikkat"); // ? Ekrana pop-up mesaj çıkarır.
+alert("Dikkat"); // ? Ekrana pop-up mesaj çıkarır.
 
-// ** ======================= DEĞİŞKEN TANIMLAMA ======================
+// * =======================================================
+// *                 DEĞİŞKEN TANIMLAMA
+// * =======================================================
 
-//**  -----  VAR -----
+//************************ VAR ****************************
 // ? var keyword ile değişken tanımlanabilir.
 // ? Ancak, modern JS var keyword'unun kullanımı azaldı.
 //? Çünkü, var global değişken gibi düşünülebilir.
@@ -26,7 +31,7 @@ pi = true;
 console.log(pi);
 console.log(typeof pi); // ? Boolean
 
-// ** değişken tanımlama keyword'u kullanılmasa da değişken tanımlanmış oluyor.
+// * Değişken tanımlama keyword'u kullanılmasa da değişken tanımlanmış oluyor.
 isim = "Ahmet";
 console.log(isim);
 console.log(typeof isim); // ? String
@@ -35,22 +40,19 @@ isim = 4;
 console.log(isim);
 console.log(typeof isim); // ? Number
 
-//**  -----  CONST -----
+//************************ CONST ****************************
 // ? const ve let Modern JS ile gelmiş yeni değişken tanımlama keyword'leridir.
 // ! CONST: Sadece başlangıçta değer atılabilir.
 // ! Sonradan değeri değiştirilemez (non-primitive'ler hariç).
 
 // const piSayisi = 3.14;
-
 // console.log(piSayisi);
-
 // piSayisi = 3; // ! Hata const değişkene sonradan değer atılamaz.
 // console.log(piSayisi); // ! Hata const değişkene sonradan değer atılamaz.
 
-//**  -----  LET -----
-
-// ? Eğerki değişkenimzin değerinin değişmesi gerekiyor ise const kullanamayız. Bunun yerine LET kullanabiliriz.
-
+//************************ LET ****************************
+// ? Eğerki değişkenimİzin değerinin değişmesi gerekiyor ise const kullanamayız.
+// ? Bunun yerine LET kullanabiliriz.
 // ! LET Block-scope bir değişkendir. VAR ise global-scope bir tanımlamadır.
 // * Block-scope: Sadece tanımlı olduğu alanda geçerlidir.
 
@@ -60,6 +62,7 @@ fiyat = 5.5;
 console.log(fiyat);
 console.log(typeof fiyat);
 
+// String tanımlamak için 3 farklı karakter kullanılabilir.
 let isim1 = "Mustafa"; // Çift tırnak
 let isim2 = "Ahmet"; // Tek tırnak
 let isim3 = `Alican`; // Backtick
@@ -70,6 +73,9 @@ const dil = null;
 console.log(dil);
 console.log(typeof dil);
 
+// * =======================================================
+// *                 ARİTMETİK OPERATÖRLER
+// * =======================================================
 const sucuk = 40;
 const sakız = 2;
 const kola = 5;
@@ -81,7 +87,7 @@ toplamFiyat += 50;
 console.log(toplamFiyat, kola); // ? 98 5
 console.log("TOPLAM:", toplamFiyat); // ? TOPLAM: 98
 
-// ! + operatörü string birletirme işlemi de gerçekelştirir.
+// ! + operatörü string birleştirme işlemi de gerçekleştirir.
 const ad = "Can";
 const soyAd = "Canan";
 console.log(ad + soyAd);
@@ -109,13 +115,11 @@ console.log(`YAŞ:${yıl - dogumTarihi}`); // * Template Literal ile yazdırma.
 
 const taban = 2;
 const us = 8;
-
 const sonuc = taban ** us; // ? Us alma operatoru
 console.log(sonuc);
 
-// Mod alma %
+// ÖRNEK: (Mod alma %)
 const sayi = 123;
-
 const birler = sayi % 10;
 const onlar = Math.floor(sayi / 10) % 10;
 const yuzler = Math.floor(sayi / 100);
@@ -124,23 +128,24 @@ console.log("Birler:" + birler);
 console.log("Onlar:" + onlar);
 console.log("Yuzler:" + yuzler);
 
-// * KARŞILAŞTIRMA OPERATÖRLERİ
+// * =======================================================
+// *         KARŞILAŞTIRMA ve LOJİK OPERATÖRLER
+// * =======================================================
 // ! 3'lü karşılaştırma operatörü kullanıldığında hem veri tipi hem de içerik kontrolü yapılır.
 const sayi1 = 100;
 const sayi2 = "100";
-
 console.log(typeof sayi1, typeof sayi2);
-
 console.log(sayi1 == sayi2); // true
 console.log(sayi1 === sayi2); // false
 
 const x = true;
 const y = true;
 const z = undefined;
-
 console.log(x && y && z); // undefined
 
-//**  ======== TERNARY ==========
+// * =======================================================
+// *                         TERNARY
+// * =======================================================
 
 // const age = +prompt("Yasinizi giriniz:");
 const name1 = prompt("Adinizi giriniz:");
@@ -150,7 +155,11 @@ age >= 18
   ? console.log(`${name1} ehliyet alabilir`)
   : console.log(`${name1} ehliyet alamaz`);
 
+// ÖRNEK
 const result =
   age >= 18 ? `${name1} ehliyet alabilir` : `${name1} ehliyet alamaz`;
-
 console.log(result);
+
+// ÖRNEK
+const sayi4 = 41;
+console.log(String(sayi4), sayi4);
