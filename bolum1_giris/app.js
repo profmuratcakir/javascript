@@ -144,7 +144,7 @@ const z = undefined;
 console.log(x && y && z); // undefined
 
 // * =======================================================
-// *                         TERNARY
+// *                      TERNARY
 // * =======================================================
 
 // const age = +prompt("Yasinizi giriniz:");

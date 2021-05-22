@@ -2,7 +2,7 @@
 // *                   KARAR YAPILARI
 // * =======================================================
 
-//************************ IF-ELSE *************************
+// //************************ IF-ELSE ***********************
 const s1 = Number(prompt("Birinci Sayı:"));
 const islem = prompt("İslemi giriniz");
 const s2 = Number(prompt("İkinci Sayı:"));
@@ -28,7 +28,7 @@ const result = age > 18 && healt == "e" ? "Askere Gidebilir" : "Askere Gidemez";
 console.log(result);
 alert(result);
 
-//************************ SWITCH-CASE ****************************
+//************************ SWITCH-CASE ***********************
 const gunNo = Number(prompt("Gun numarasini giriniz:"));
 switch (gunNo) {
   case 1:
@@ -58,7 +58,7 @@ switch (gunNo) {
 }
 console.log(gunAdi);
 
-//************************ TERNARY ****************************
+//************************ TERNARY ************************
 // ÖRNEK
 const maas = prompt("Maasinizi giriniz:");
 const calismaSuresi = prompt("Calisma suresini giriniz:");
@@ -93,5 +93,35 @@ for (let i = 2; i < number; i++) {
     break;
   }
 }
-const sonuc = asal ? "ASAL" : "ASAL DEGIL";
-console.log(sonuc);
+const asalMi = asal ? "ASAL" : "ASAL DEGIL";
+console.log(asalMi);
+
+//ÖRNEK: do- while döngüsü
+let not;
+do {
+  not = prompt("0-100 arasında bir not giriniz:");
+} while (not < 0 || not > 100);
+console.log("Giridiğiniz not 0-100 arasındadır");
+
+// ÖRNEK: while döngüsü
+let not;
+not = prompt("0-100 arasında bir not giriniz:");
+while (not < 0 || not > 100) {
+  console.error("Girilen not 0-100 arasında olmalıdır.");
+  not = prompt("0-100 arasında bir not giriniz:");
+}
+console.log("Giridiğiniz not 0-100 arasındadır");
+
+// ÖRNEK: klavyeden Q karakteri girilene kadar not girişi yapan bir programı döngü kullanarak yazınız.
+
+let not1;
+let i = 1;
+while (true) {
+  not1 = prompt(i + ".kisinin notunu giriniz:");
+  not1 = not1.toLowerCase(); // girilen karakteri küçük harfe çeviriyoruz.
+  if (not1 == "q") {
+    break;
+  }
+  i++;
+  console.log(Number(not1));
+}
