@@ -1,3 +1,13 @@
 .btn {
   width: 100px;
+  height: 40px;
+}
+.input-div {
+  margin-top: 30px;
+  /* background-color: beige; */
+}
+.textbox,
+.dil {
+  width: 300px;
+  height: 40px;
 }
