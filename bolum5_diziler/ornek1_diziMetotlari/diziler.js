@@ -84,7 +84,7 @@ ucIndeks < 0
   ? alert("aranilan nesne bulunamadi")
   : alert("Aranilan nesnenin indeksi:" + ucIndeks);
 
-// join dizinin elamanlari birlestirip strgin hale cevirir.
+// join dizinin elamanlari birlestirip string hale cevirir.
 const sayilar1 = sayilar.join(" "); // elemanlarin arasına bosluk koy.
 console.log(sayilar1);
 
